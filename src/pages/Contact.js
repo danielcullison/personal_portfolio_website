@@ -15,12 +15,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Reset error and success messages
     setError("");
     setSuccess("");
 
-    // Validation
     if (!name || !email || !message) {
       setError("All fields are required.");
       return;
@@ -30,13 +27,8 @@ const Contact = () => {
       return;
     }
 
-    // Simulate sending the form data (replace with your API call)
     console.log({ name, email, message });
-
-    // Simulate successful submission
     setSuccess("Your message has been sent!");
-
-    // Clear the form
     setName("");
     setEmail("");
     setMessage("");

@@ -1,19 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Prata&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-/* Navbar Container */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent; /* No background color */
+  background-color: transparent;
   padding: 1rem 2rem;
-  box-shadow: none; /* No border or shadow */
+  box-shadow: none;
+  flex-wrap: wrap;
 }
 
-/* Navbar Links */
 nav a {
   text-decoration: none;
-  color: #ffffff; /* Change to white for font color */
+  color: #ffffff;
   font-size: 1.1rem;
   margin: 0 1rem;
   position: relative;
@@ -21,33 +20,41 @@ nav a {
   font-family: "Quantico";
 }
 
-/* Active Link Style */
 nav a.active-link {
-  color: #a0a3a9; /* Highlight active link with light blue */
+  color: #a0a3a9;
   font-weight: bold;
 }
 
-/* Hover Effect */
 nav a:hover {
-  color: #a0a3a9; /* Change to light blue on hover */
+  color: #a0a3a9;
+  text-decoration: none;
 }
 
-/* Underline Effect */
 nav a::after {
   content: "";
   display: block;
   height: 2px;
   width: 0;
-  background: #a0a3a9; /* Underline color */
+  background: #a0a3a9;
   transition: width 0.3s ease;
   position: absolute;
   left: 50%;
-  bottom: -5px; /* Position the underline */
+  bottom: -5px;
   transform: translateX(-50%);
 }
 
-/* Underline on Hover */
 nav a:hover::after,
 nav a.active-link::after {
-  width: 100%; /* Full width on hover */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-end; /* Align links to the right */
+    text-align: right; /* Right-align text for better appearance */
+  }
+  nav a {
+    margin: 0.5rem 0;
+  }
 }

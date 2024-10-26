@@ -9,8 +9,8 @@ const About = () => {
       <div className="text-content">
         <h1>About Me</h1>
         <p>
-          👋 Welcome to my portfolio website! My name is Daniel Cullison. I am a
-          Software Developer from New Orleans, LA. I have a passion for
+          👋 Welcome to my portfolio website! My name is Daniel Cullison, and I
+          am a Software Developer from New Orleans, LA. I have a passion for
           technology and discovering ways to leverage it to solve complex
           problems. I am driven by a relentless curiosity and a love for
           continuous learning. My goal is to contribute innovative solutions

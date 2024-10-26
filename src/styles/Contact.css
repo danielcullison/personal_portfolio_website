@@ -1,11 +1,9 @@
-/* Contact.css */
-
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Prata&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
   font-family: "Quantico", sans-serif;
-  background-color: #121212; /* Dark background for contrast */
-  color: #e0e0e0; /* Light text color */
+  background-color: #121212;
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
 }
@@ -21,10 +19,10 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px; /* Limit width for better alignment */
-  margin: 0 auto; /* Center the form */
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
@@ -32,30 +30,30 @@ form {
 
 input,
 textarea {
-  width: 100%; /* Full width for inputs */
-  margin: 10px 0; /* Space between inputs */
-  padding: 10px; /* Padding inside inputs */
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.05); /* Light background for inputs */
-  color: #e0e0e0; /* Text color */
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
   font-family: "Quantico", sans-serif;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #d6d2d2; /* Lighter placeholder text */
+  color: #d6d2d2;
 }
 
 textarea {
-  resize: none; /* Prevent resizing */
-  height: 100px; /* Set height for textarea */
+  resize: none;
+  height: 100px;
 }
 
 button {
-  background-color: #2980b9; /* Button color */
-  color: #ffffff; /* Text color */
-  padding: 10px 20px; /* Button padding */
+  background-color: #2980b9;
+  color: #ffffff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -63,27 +61,48 @@ button {
 }
 
 button:hover {
-  background-color: #3498db; /* Button hover color */
+  background-color: #3498db;
 }
 
 .success,
 .error {
-  text-align: center; /* Center the text */
+  text-align: center;
   margin: 10px 0;
   width: 100%;
 }
 
 .success {
-  color: #2ecc71; /* Green for success */
+  color: #2ecc71;
 }
 
 .error {
-  color: #e74c3c; /* Red for errors */
+  color: #e74c3c;
 }
 
 .message-container {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%;
   margin-left: 26%;
+}
+
+@media (max-width: 768px) {
+  form {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .message-container {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 10px;
+  }
 }
