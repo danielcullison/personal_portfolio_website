@@ -1,0 +1,58 @@
+/* Education.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Prata&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  font-family: "Quantico", sans-serif;
+  color: #e0e0e0; /* Light text color */
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 30px 0 20px;
+  color: #e0e0e0;
+}
+
+.ISDS,
+.Bootcamp {
+  border: 1px solid rgb(255, 255, 255); /* Light border for separation */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: #d6d2d2; /* Slightly lighter for contrast */
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+li {
+  font-size: 1rem;
+  color: #d6d2d2;
+  margin: 5px 0;
+}
+
+p {
+  line-height: 1.6;
+  color: #e0e0e0;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 10px auto;
+}

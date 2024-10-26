@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Prata&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.about-container {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+  align-items: flex-start; /* Align items to the top */
+  text-align: left; /* Align text to the left */
+  background-color: #121212; /* Optional: to give a contrasting background */
+}
+
+.aboutMePic {
+  border-radius: 10%;
+  width: 500px;
+  height: 600px;
+  margin-top: 150px;
+  margin-right: 20px; /* Add margin to the right of the image */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Optional: adds a soft shadow */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: #e0e0e0;
+  font-family: "Quantico";
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 20px 0 10px;
+  color: #e0e0e0;
+  font-family: "Quantico";
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #e0e0e0;
+  font-family: "Quantico";
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+li {
+  font-size: 1rem;
+  color: #d6d2d2;
+  margin: 10px 0;
+  font-family: "Quantico";
+}
+
+.text-content {
+  max-width: 800px; /* Limit the width of the text */
+  padding-left: 150px;
+}
