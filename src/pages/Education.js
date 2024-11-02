@@ -3,17 +3,17 @@ import "../styles/Education.css";
 
 const Education = () => {
   return (
-    <div>
-      <h2 className="title">Education</h2>
+    <div className="education-section">
+      <h2 className="education-title">Education</h2>
       <div className="education-container">
-        <div className="ISDS">
-          <h3>
-            Louisiana State University - B.S., Information Systems & Decsion
+        <div className="degree">
+          <h3 className="degree-title">
+            Louisiana State University - B.S., Information Systems & Decision
             Sciences
           </h3>
-          <h4>GPA: 3.4/4.0</h4>
-          <h4>RELEVANT COURSEWORK:</h4>
-          <ul className="coursework">
+          <h4 className="gpa">GPA: 3.4/4.0</h4>
+          <h4 className="coursework-title">RELEVANT COURSEWORK:</h4>
+          <ul className="coursework-list">
             <li>Analysis and Design of Information Systems</li>
             <li>Design of Information Systems Solutions</li>
             <li>Management of Information Systems Projects</li>
@@ -23,10 +23,12 @@ const Education = () => {
             <li>Enterprise Architecture</li>
           </ul>
         </div>
-        <div className="Bootcamp">
-          <h3>Louisiana State University - Software Engineering Bootcamp</h3>
-          <h4>SUMMARY:</h4>
-          <p>
+        <div className="bootcamp">
+          <h3 className="bootcamp-title">
+            Louisiana State University - Software Engineering Bootcamp
+          </h3>
+          <h4 className="bootcamp-summary-title">SUMMARY:</h4>
+          <p className="bootcamp-summary">
             An immersive and intensive 28-week program that covers both
             front-end and back-end technologies. The curriculum includes
             fundamentals of web development such as HTML, CSS, and JavaScript,

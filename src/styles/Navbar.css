@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Prata&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-nav {
+div {
+  padding: 2rem;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,27 +14,43 @@ nav {
   flex-wrap: wrap;
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.nav-link {
   text-decoration: none;
   color: #ffffff;
   font-size: 1.1rem;
   margin: 0 1rem;
   position: relative;
   transition: color 0.3s ease;
-  font-family: "Quantico";
+  font-family: "Quantico", sans-serif;
 }
 
-nav a.active-link {
+.active-link {
   color: #a0a3a9;
   font-weight: bold;
 }
 
-nav a:hover {
+.nav-link:hover {
   color: #a0a3a9;
   text-decoration: none;
 }
 
-nav a::after {
+.nav-link::after {
   content: "";
   display: block;
   height: 2px;
@@ -43,18 +63,33 @@ nav a::after {
   transform: translateX(-50%);
 }
 
-nav a:hover::after,
-nav a.active-link::after {
+.nav-link:hover::after,
+.active-link::after {
   width: 100%;
 }
 
 @media (max-width: 768px) {
-  nav {
+  .navbar {
     flex-direction: column;
-    align-items: flex-end; /* Align links to the right */
-    text-align: right; /* Right-align text for better appearance */
+    align-items: flex-end;
   }
-  nav a {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
     margin: 0.5rem 0;
+    text-align: right;
   }
 }

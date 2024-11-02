@@ -5,7 +5,7 @@ body {
   color: #e0e0e0;
 }
 
-.title {
+.education-title {
   font-size: 2rem;
   text-align: center;
   margin: 30px 0 20px;
@@ -19,8 +19,8 @@ body {
   gap: 20px;
 }
 
-.ISDS,
-.Bootcamp {
+.degree,
+.bootcamp {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 20px;
@@ -30,19 +30,26 @@ body {
   margin: 0;
 }
 
-h3 {
+.degree-title,
+.bootcamp-title {
   font-size: 1.5rem;
   color: #e0e0e0;
   margin-bottom: 10px;
 }
 
-h4 {
+.gpa {
   font-size: 1.2rem;
   color: #d6d2d2;
   margin-bottom: 10px;
 }
 
-.coursework {
+.coursework-title {
+  font-size: 1.2rem;
+  color: #d6d2d2;
+  margin-bottom: 10px;
+}
+
+.coursework-list {
   list-style-type: disc;
   padding-left: 20px;
   margin: 20px auto;
@@ -55,7 +62,7 @@ li {
   margin: 5px 0;
 }
 
-p {
+.bootcamp-summary {
   line-height: 1.6;
   color: #e0e0e0;
   font-size: 1rem;
@@ -70,26 +77,25 @@ p {
     align-items: center;
   }
 
-  .ISDS,
-  .Bootcamp {
+  .degree,
+  .bootcamp {
     max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
-  .title {
+  .education-title {
     font-size: 1.8rem;
   }
 
-  h3 {
+  .degree-title,
+  .bootcamp-title {
     font-size: 1.3rem;
   }
 
-  h4 {
-    font-size: 1rem;
-  }
-
-  p,
+  .gpa,
+  .coursework-title,
+  .bootcamp-summary,
   li {
     font-size: 0.9rem;
   }

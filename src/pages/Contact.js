@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/Contact.css";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const form = useRef();
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -13,10 +12,15 @@ const Contact = () => {
     return re.test(String(email).toLowerCase());
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setError("");
     setSuccess("");
+
+    const formData = new FormData(form.current);
+    const name = formData.get("user_name");
+    const email = formData.get("user_email");
+    const message = formData.get("message");
 
     if (!name || !email || !message) {
       setError("All fields are required.");
@@ -27,39 +31,40 @@ const Contact = () => {
       return;
     }
 
-    console.log({ name, email, message });
-    setSuccess("Your message has been sent!");
-    setName("");
-    setEmail("");
-    setMessage("");
+    emailjs
+      .sendForm(
+        "service_64k1n4o",
+        "template_ex3fj3t",
+        form.current,
+        "joC_iRT3c9BMcQRaw"
+      )
+      .then(
+        () => {
+          setSuccess("Your message has been sent!");
+          form.current.reset();
+        },
+        (error) => {
+          setError("Failed to send the message, please try again.");
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
-    <div>
-      <h2 className="contactTitle">Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <textarea
-          placeholder="Your Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <button type="submit">Send</button>
+    <div className="contact-section">
+      <h2 className="contact-title">Contact Me</h2>
+      <form ref={form} className="contact-form" onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" className="form-input" />
+        <label>Email</label>
+        <input type="email" name="user_email" className="form-input" />
+        <label>Message</label>
+        <textarea name="message" className="form-textarea" />
+        <input type="submit" value="Send" className="submit-button" />
       </form>
       <div className="message-container">
-        {error && <p className="error">{error}</p>}
-        {success && <p className="success">{success}</p>}
+        {error && <p className="error-message">{error}</p>}
+        {success && <p className="success-message">{success}</p>}
       </div>
     </div>
   );
