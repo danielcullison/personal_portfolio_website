@@ -85,18 +85,18 @@ li {
 
 @media (max-width: 480px) {
   .education-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .degree-title,
   .bootcamp-title {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
   }
 
   .gpa,
   .coursework-title,
   .bootcamp-summary,
   li {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 }

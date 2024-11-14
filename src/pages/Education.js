@@ -29,7 +29,7 @@ const Education = () => {
           </h3>
           <h4 className="bootcamp-summary-title">SUMMARY:</h4>
           <p className="bootcamp-summary">
-            An immersive and intensive 28-week program that covers both
+            An immersive program that covers both
             front-end and back-end technologies. The curriculum includes
             fundamentals of web development such as HTML, CSS, and JavaScript,
             before delving into more advanced topics such as React.js for

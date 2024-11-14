@@ -2,6 +2,7 @@ import React from "react";
 import profilePicture from "../assets/profile_picture.jpeg";
 import linkedInLogo from "../assets/linkedin.png";
 import gitHubLogo from "../assets/github.png";
+import resumeIcon from "../assets/resume-icon(1).png";
 import "../styles/Home.css";
 
 const Home = () => {
@@ -34,6 +35,14 @@ const Home = () => {
           className="social-icon"
         >
           <img src={gitHubLogo} alt="GitHub Logo" />
+        </a>
+        <a
+          href="https://danielcullison.github.io/resume/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <img src={resumeIcon} alt="Resume Icon" />
         </a>
       </div>
     </header>
